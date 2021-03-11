@@ -27,6 +27,12 @@ const TodoList = () => {
 		setTodos((todos) => todos.filter((todo) => todo.id !== id));
 	};
 
+	const handleReset = () => {
+		dispatch({
+			type : 'RESET'
+		});
+		setTodos([]);
+	};
 	return (
 		<div className="TodoList">
 			<TodoForm add={addTodo} />
@@ -41,6 +47,9 @@ const TodoList = () => {
 							</ul>
 						</div>
 					</div>
+					<button onClick={handleReset} className="btn btn-lg btn-danger">
+						ERASE ALL TODOS
+					</button>
 				</div>
 			) : (
 				<h2 style={{ textAlign: 'center' }} className="mt-3">
