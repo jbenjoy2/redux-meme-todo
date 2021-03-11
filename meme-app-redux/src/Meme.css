@@ -1,0 +1,50 @@
+.Meme p {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 15px 0;
+	padding: 0 5px;
+	font-family: impact;
+	font-size: 2.5em;
+	text-transform: uppercase;
+	color: white;
+	letter-spacing: 1px;
+	text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 0px 2px 0 #000,
+		2px 0px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 2px 5px #000;
+}
+
+.Meme {
+	margin: auto;
+	width: 450px;
+	height: 450px;
+	background-size: 100%;
+	text-align: center;
+	position: relative;
+	border: 3px solid black;
+	border-radius: 6px;
+}
+
+.Meme-bottomText {
+	bottom: 0;
+}
+
+.Meme-topText {
+	top: 0;
+}
+
+.Meme-delete {
+	position: absolute;
+	left: 360px;
+	right: 0;
+	margin: 15px 0;
+	top: 390px;
+	opacity: 0.7;
+	color: white;
+	transition: opacity 0.35s ease-in-out !important;
+	text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 0px 2px 0 #000,
+		2px 0px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 2px 5px #000;
+}
+
+.Meme-delete:hover {
+	opacity: 1;
+}

@@ -1,0 +1,11 @@
+.MemeList {
+	display: flex;
+	width: 100vw;
+	flex-wrap: wrap-reverse;
+	justify-content: center;
+}
+
+.App h1 {
+	text-align: center;
+	margin-top: 15px;
+}
