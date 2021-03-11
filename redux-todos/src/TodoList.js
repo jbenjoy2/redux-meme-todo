@@ -33,6 +33,22 @@ const TodoList = () => {
 		});
 		setTodos([]);
 	};
+
+	const updateTodo = (id, updatedTask) => {
+		dispatch({
+			type        : 'EDIT',
+			id,
+			updatedTask
+		});
+		setTodos((todos) =>
+			todos.map((todo) => {
+				if (todo.id === id) {
+					return { ...todo, task: updatedTask };
+				}
+				return todo;
+			})
+		);
+	};
 	return (
 		<div className="TodoList">
 			<TodoForm add={addTodo} />
@@ -42,7 +58,13 @@ const TodoList = () => {
 						<div className="card-body">
 							<ul className="TodoList-todos list-group">
 								{todos.map((todo) => (
-									<Todo id={todo.id} key={todo.id} remove={removeTodo} task={todo.task} />
+									<Todo
+										id={todo.id}
+										key={todo.id}
+										remove={removeTodo}
+										task={todo.task}
+										update={updateTodo}
+									/>
 								))}
 							</ul>
 						</div>
