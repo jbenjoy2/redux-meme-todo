@@ -1,0 +1,9 @@
+.TodoList-allTodos {
+	width: 500px;
+}
+
+.TodoList-list {
+	display: flex;
+	width: 100vw;
+	justify-content: center;
+}
