@@ -36,7 +36,7 @@ const Todo = ({ id, task, remove, update }) => {
 	}
 
 	return (
-		<li className="list-group-item my-2 rounded-pill border-top-3 Todo">
+		<li className="list-group-item list-group-item-success my-2 rounded-pill border-top-3 Todo">
 			{toEdit}
 			<button onClick={toggleEdit} className="btn btn-sm rounded-pill btn-secondary float-left">
 				Edit
